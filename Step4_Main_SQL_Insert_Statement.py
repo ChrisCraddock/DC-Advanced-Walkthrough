@@ -60,7 +60,7 @@ for file in os.listdir(directory):
             try:
                 connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="<database name>", autocommit=True)
                 cursor = connection.cursor()
-                mySql_insert_query = """INSERT INTO <TABLE NAME> 
+                mySql_insert_query = """INSERT INTO tableA 
                     (A1_A,A1_B,A1_C,DOCUMENT_TITLE)
                     VALUES (%s,%s,%s,%s)"""
                 record = (A1_A,A1_B,A1_C,TITLE)
