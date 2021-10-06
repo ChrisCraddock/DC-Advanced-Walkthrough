@@ -1,7 +1,7 @@
 # DC-Advanced-Walkthrough
 Data Center Advanced Walkthrough. Insert data from a PDF file into MySQL database
 
-This was used with XAMPP install.
+This was used with XAMPP installed.
 
 Layout of database:
 
