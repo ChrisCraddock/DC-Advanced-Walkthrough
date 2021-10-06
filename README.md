@@ -1,6 +1,8 @@
 # DC-Advanced-Walkthrough
 Data Center Advanced Walkthrough. Insert data from a PDF file into MySQL database
 
+This was used with XAMPP install.
+
 Layout of database:
 
 tableA: A1_A=smallint(6), A1_B=smallint(6), A1_C=smallint(6), *SUBMITTED_DT=DateTime current_timestamp()*, *NOTE=tinytext null*, DOCUMENT_TITLE=VARCHAR(30)
