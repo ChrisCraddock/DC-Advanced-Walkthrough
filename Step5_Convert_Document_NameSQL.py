@@ -53,12 +53,12 @@ for file in os.listdir(directory):
             #them in Line 56 'def insert_variables_into_table()' as what the column names will be in your INSERT statement.
             #'record' takes Line 78 variables and uses what is inside them as the VALUES.  Sorry for any confussion in that explination.
             
-        def insert_variables_into_table(SUBMITTED_DT,OLD_DOCUMENT):
+        def insert_variables_into_table(SUBMITTED_DT,DOCUMENT_TITLE):
             try:
                 connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="<database name>", autocommit=True)
                 cursor = connection.cursor()
                 mySql_insert_query = """INSERT INTO tableC 
-                    (SUBMITTED_DT,OLD_DOCUMENT)
+                    (SUBMITTED_DT,DOCUMENT_TITLE)
                     VALUES (%s,%s)"""
                 record = (New_DateTime,TITLE)
                 cursor.execute(mySql_insert_query,record)
