@@ -3,7 +3,7 @@ from collections import deque
 from itertools import groupby
 
 
-directory = 'C:\\Users\\cmc03\\OneDrive\\Desktop\\python'
+directory = 'C:\\path\\to\\folder'
 for file in os.listdir(directory):
     if file.endswith(".txt"): #Skip non-TXT files
         with open(os.path.join(directory, file), "r") as f:
