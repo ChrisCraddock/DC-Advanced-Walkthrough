@@ -5,8 +5,8 @@ import mysql.connector
 from collections import deque
 
 
-
-directory = 'C:\\Users\\cmc03\\OneDrive\\Desktop\\python'
+#Assign the path to a variable.  For-loop all the .txt files
+directory = 'C:\\path\\to\\folder'
 for file in os.listdir(directory):
     if file.endswith(".txt"): #Skip non-TXT files
         with open(os.path.join(directory, file), "r") as f:
@@ -41,11 +41,23 @@ for file in os.listdir(directory):
             
             New_DateTime = year1+year2+year3+year4+'-'+month1+month2+'-'+day1+day2+' '+hour1+hour2+':'+minute1+minute2+':00'
 
+            #The passwd assumes you CHANGED the passwd to 'root'.  Leave change to blank or whatever the Database password is
+            
+            #Line 56: 'def insert_variables_into_table' are the COLUMN names in your database. They MUST match 'mySql_insert_query'
+            #Line 63: 'record' are your VARIABLE names you created above. They need to be in the order of the COLUMNS they will go into.
+            #Line 62: VALUES' %s is string formatting but just think of it as a vairable placeholder for 'record'.  It worked fine for 
+            #both int and str in my database.  Only thing you need to make sure of is that the TYPE you are declaring above with the variable 
+            #matches the TYPE in the database. Example int() = INT, str() = VARCHAR etc.
+            #Line 78: 'insert_variables_into_table' at the bottom MUST match the variable names and order of 'record'
+            #Explination: Essentially Line 78 'insert_variables_into_table()' is taking the variables assigned above and passing
+            #them in Line 56 'def insert_variables_into_table()' as what the column names will be in your INSERT statement.
+            #'record' takes Line 78 variables and uses what is inside them as the VALUES.  Sorry for any confussion in that explination.
+            
         def insert_variables_into_table(SUBMITTED_DT,OLD_DOCUMENT):
             try:
-                connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="advancedwalk", autocommit=True)
+                connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="<database name>", autocommit=True)
                 cursor = connection.cursor()
-                mySql_insert_query = """INSERT INTO prestage 
+                mySql_insert_query = """INSERT INTO <TABLE NAME> 
                     (SUBMITTED_DT,OLD_DOCUMENT)
                     VALUES (%s,%s)"""
                 record = (New_DateTime,TITLE)
