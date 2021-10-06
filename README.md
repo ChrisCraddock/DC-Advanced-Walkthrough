@@ -5,7 +5,8 @@ Layout of database:
 
 tableA: A1_A=smallint(6), A1_B=smallint(6), A1_C=smallint(6), *SUBMITTED_DT=DateTime current_timestamp()*, *NOTE=tinytext null*, DOCUMENT_TITLE=VARCHAR(30)
 
-#--This is to save space on tableA with long notes. NOTE will be given *null* by default in tableA, then compaire the DOCUMENT_TITLE in both and either given a 'Yes' or 'No'
+#--This is to save space on tableA with long notes.
+#--NOTE will be given *null* by default in tableA, then compaire the DOCUMENT_TITLE in both and either given a 'Yes' or 'No'
 tableB: NOTE=VARCHAR(150), DOCUMENT_TITLE=VARCHAR(30)
 
 #--tableC contains the DOCUMENT_TITLE and its DateTime conversion.
