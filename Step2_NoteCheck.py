@@ -2,7 +2,10 @@ import os
 from collections import deque
 from itertools import groupby
 
-
+#Assign folder to  variable 'directory'
+#Open the variable 'directory' and convert it all into a list with no spaces
+#This is a good way to see where there are any notes and how they are being processed.
+#Use this to see what files contain notes and seperate them to deal with later (If multiple lines exist or characters you do not want)
 directory = 'C:\\path\\to\\folder'
 for file in os.listdir(directory):
     if file.endswith(".txt"): #Skip non-TXT files
