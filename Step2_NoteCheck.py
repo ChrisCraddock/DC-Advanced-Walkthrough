@@ -1,6 +1,5 @@
 import os
-from collections import deque
-from itertools import groupby
+#from itertools import groupby
 
 #Assign folder to  variable 'directory'
 #Open the variable 'directory' and display EACH .txt files as a list with no spaces
