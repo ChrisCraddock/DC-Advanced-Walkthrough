@@ -2,11 +2,11 @@ import os
 import shutil
 
 #Source Folder
-sourcepath='C:\\Users\\cmc03\\OneDrive\\Desktop\\python' 
+sourcepath='C:\\path\\to\\folder' 
 sourcefiles = os.listdir(sourcepath)
 
 #Destination Folder (must exist first)
-destinationpath = 'C:\\Users\\cmc03\\OneDrive\\Desktop\\python\\newtext'
+destinationpath = 'C:\\path\\to\\new\\folder'
 for file in sourcefiles:
     if file.endswith('.txt'):
         shutil.move(os.path.join(sourcepath,file), os.path.join(destinationpath,file))
