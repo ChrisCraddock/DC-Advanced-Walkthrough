@@ -3,7 +3,7 @@ from collections import deque
 from itertools import groupby
 
 #Assign folder to  variable 'directory'
-#Open the variable 'directory' and convert EACH .txt files into a list with no spaces
+#Open the variable 'directory' and display EACH .txt files as a list with no spaces
 #This will ONLY be visible from the CMD line and will not affect the ACTUAL document.
 #This is a good way to see where there are any notes and how they are being processed.
 #Use this to see what files contain notes and seperate them to deal with later (If multiple lines exist or characters you do not want)
