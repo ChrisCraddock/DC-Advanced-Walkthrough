@@ -40,7 +40,7 @@ for file in os.listdir(directory):
             try:
                 connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="<database name>", autocommit=True)
                 cursor = connection.cursor()
-                mySql_insert_query = """INSERT INTO <TABLE NAME> 
+                mySql_insert_query = """INSERT INTO tableB 
                     (NOTE,OLD_DOCUMENT)
                     VALUES (%s,%s)"""
                 record = (NOTES,TITLE)
