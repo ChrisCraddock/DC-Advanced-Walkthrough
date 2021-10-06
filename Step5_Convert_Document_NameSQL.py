@@ -57,7 +57,7 @@ for file in os.listdir(directory):
             try:
                 connection = mysql.connector.connect(host="localhost", user="root", passwd="root",database="<database name>", autocommit=True)
                 cursor = connection.cursor()
-                mySql_insert_query = """INSERT INTO <TABLE NAME> 
+                mySql_insert_query = """INSERT INTO tableC 
                     (SUBMITTED_DT,OLD_DOCUMENT)
                     VALUES (%s,%s)"""
                 record = (New_DateTime,TITLE)
